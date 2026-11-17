@@ -1,24 +1,29 @@
 {
-	"name": "ben",
-	"type": "module",
-	"version": "0.0.1",
-	"engines": {
-		"node": ">=22.23.4"
-	},
-	"scripts": {
-		"dev": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@tailwindcss/vite": "^4.3.5",
-		"astro": "^7.4.12",
-		"astro-typesafe-routes": "^5.2.2",
-		"tailwindcss": "^4.3.5",
-		"typescript": "^7.0.2"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.6.8"
-	}
+  "name": "ben",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.9",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^7.4.12",
+    "astro-typesafe-routes": "^5.2.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8"
+  }
 }
