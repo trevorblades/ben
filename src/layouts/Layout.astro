@@ -2,6 +2,9 @@
 import { Font } from "astro:assets";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
+import { SEO, type SEOProps } from "astro-seo";
+
+type Props = SEOProps;
 ---
 
 <html lang="en">
@@ -11,9 +14,13 @@ import "../styles/global.css";
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content={Astro.generator}>
-    <title>Astro</title>
     <Font cssVariable="--font-special-gothic-expanded-one" />
     <Font cssVariable="--font-fira-sans-condensed" />
+    <SEO
+      {...Astro.props}
+      titleTemplate="%s - Ben Miller Leadership"
+      titleDefault="Ben Miller Leadership"
+    />
   </head>
   <body class="bg-lace text-melanzane">
     <Header />

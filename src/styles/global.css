@@ -5,17 +5,21 @@
   --color-white: #fff;
   --color-lace: #fff7eb;
   --color-melanzane: #37062a;
-  --color-geraldine: #f67c79;
+
+  --color-geraldine-50: #fef2f2;
+  --color-geraldine-100: #fee3e2;
+  --color-geraldine-200: #fdcccb;
+  --color-geraldine-300: #faa9a7;
+  --color-geraldine-400: #f67c79;
+  --color-geraldine-500: #ec4b47;
+  --color-geraldine-600: #d92d29;
+  --color-geraldine-700: #b6231f;
+  --color-geraldine-800: #97201d;
+  --color-geraldine-900: #7d211f;
+  --color-geraldine-950: #440c0b;
+
   --color-tangerine: #ffad33;
   --color-moss: #b8e7b1;
-}
-
-@utility border-darken-* {
-  border-color: oklch(from --value(--color-*) calc(l - 0.2) c h);
-}
-
-@utility bg-lighten-* {
-  background-color: oklch(from --value(--color-*) calc(l + 0.05) c h);
 }
 
 @theme inline {
