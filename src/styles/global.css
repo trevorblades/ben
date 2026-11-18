@@ -68,3 +68,8 @@
   --color-background: var(--color-old-lace-50);
   --color-foreground: var(--color-melanzane-950);
 }
+
+@theme inline {
+  --font-display: var(--font-special-gothic-expanded-one);
+  --font-sans: var(--font-fira-sans-condensed);
+}
