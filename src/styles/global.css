@@ -1,1 +1,70 @@
 @import "tailwindcss";
+
+@theme {
+  --color-melanzane-50: #fef5fd;
+  --color-melanzane-100: #fee9fc;
+  --color-melanzane-200: #fbd3f6;
+  --color-melanzane-300: #f8afec;
+  --color-melanzane-400: #f280dd;
+  --color-melanzane-500: #e64fc9;
+  --color-melanzane-600: #c930a9;
+  --color-melanzane-700: #a72489;
+  --color-melanzane-800: #891f6f;
+  --color-melanzane-900: #701f5b;
+  --color-melanzane-950: #37062a;
+
+  --color-geraldine-50: #fef2f2;
+  --color-geraldine-100: #fee3e2;
+  --color-geraldine-200: #fdcccb;
+  --color-geraldine-300: #faa9a7;
+  --color-geraldine-400: #f67c79;
+  --color-geraldine-500: #ec4b47;
+  --color-geraldine-600: #d92d29;
+  --color-geraldine-700: #b6231f;
+  --color-geraldine-800: #97201d;
+  --color-geraldine-900: #7d211f;
+  --color-geraldine-950: #440c0b;
+
+  --color-old-lace-50: #fff7eb;
+  --color-old-lace-100: #ffefd5;
+  --color-old-lace-200: #fedbaa;
+  --color-old-lace-300: #fdc074;
+  --color-old-lace-400: #fb9a3c;
+  --color-old-lace-500: #f97d16;
+  --color-old-lace-600: #ea620c;
+  --color-old-lace-700: #c2490c;
+  --color-old-lace-800: #9a3a12;
+  --color-old-lace-900: #7c3212;
+  --color-old-lace-950: #431707;
+
+  --color-yellow-orange-50: #fff9eb;
+  --color-yellow-orange-100: #ffedc6;
+  --color-yellow-orange-200: #ffd988;
+  --color-yellow-orange-300: #ffbe4a;
+  --color-yellow-orange-400: #ffad33;
+  --color-yellow-orange-500: #f98107;
+  --color-yellow-orange-600: #dd5c02;
+  --color-yellow-orange-700: #b73d06;
+  --color-yellow-orange-800: #942f0c;
+  --color-yellow-orange-900: #7a270d;
+  --color-yellow-orange-950: #461102;
+
+  --color-moss-green-50: #f4fbf2;
+  --color-moss-green-100: #e4f7e1;
+  --color-moss-green-200: #b8e7b1;
+  --color-moss-green-300: #9fde97;
+  --color-moss-green-400: #6dc662;
+  --color-moss-green-500: #49aa3d;
+  --color-moss-green-600: #388c2d;
+  --color-moss-green-700: #2f6e27;
+  --color-moss-green-800: #285823;
+  --color-moss-green-900: #22491e;
+  --color-moss-green-950: #0e270c;
+
+  --color-primary: var(--color-geraldine-400);
+  --color-secondary: var(--color-yellow-orange-400);
+  --color-accent: var(--color-moss-green-200);
+
+  --color-background: var(--color-old-lace-50);
+  --color-foreground: var(--color-melanzane-950);
+}

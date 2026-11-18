@@ -32,5 +32,8 @@
         "organizeImports": "on"
       }
     }
+  },
+  "tailwind": {
+    "stylesheet": "src/styles/global.css"
   }
 }
