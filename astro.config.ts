@@ -19,6 +19,8 @@ export default defineConfig({
       cssVariable: "--font-fira-sans-condensed",
       name: "Fira Sans Condensed",
       weights: [400, 500, 600],
+      optimizedFallbacks: false,
+      fallbacks: ["system-ui", "sans-serif"],
     },
   ],
 });

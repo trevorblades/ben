@@ -3,15 +3,15 @@ import { Font } from "astro:assets";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 import { SEO, type SEOProps } from "astro-seo";
+import { $path } from "astro-typesafe-routes/path";
 
 type Props = SEOProps;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-lace text-melanzane">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href={$path({ to: "/favicon.svg" })}>
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content={Astro.generator}>
     <Font cssVariable="--font-special-gothic-expanded-one" />
@@ -22,7 +22,7 @@ type Props = SEOProps;
       titleDefault="Ben Miller Leadership"
     />
   </head>
-  <body class="bg-lace text-melanzane">
+  <body>
     <Header />
     <main class="mx-auto max-w-360">
       <slot />

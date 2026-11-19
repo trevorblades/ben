@@ -1,22 +1,26 @@
 ---
 import Link from "astro-typesafe-routes/link";
+import Logo from "../assets/logo.svg";
 ---
 
 <header class="sticky top-0 bg-lace">
   <div class="mx-auto flex max-w-360 items-center justify-between px-6 py-4">
-    <Link to="/" class="font-display text-lg leading-none font-medium">
-      Ben Miller <br>Leadership
+    <Link to="/" class="flex items-center gap-3">
+      <Logo class="size-9 fill-tangerine" />
+      <div class="font-display text-lg leading-none font-medium">
+        Ben Miller <br>Leadership
+      </div>
     </Link>
     <nav>
       <ul class="flex gap-6 font-medium">
         <li>
-          <Link class="hover:underline" to="/">About</Link>
+          <Link class="link" to="/">About</Link>
         </li>
         <li>
-          <Link class="hover:underline" to="/services">Services</Link>
+          <Link class="link" to="/services">Services</Link>
         </li>
         <li>
-          <Link class="hover:underline" to="/contact">Contact</Link>
+          <Link class="link" to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

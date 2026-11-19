@@ -1,7 +1,29 @@
 ---
+import Link from "astro-typesafe-routes/link";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Services">
-  <h1 class="font-display text-7xl">Services</h1>
+  <div class="mx-auto max-w-360 space-y-20 px-6 pt-45 pb-20">
+    <div class="mx-auto max-w-3xl space-y-8 text-center">
+      <h1 class="font-display text-7xl">Services</h1>
+      <p class="text-xl text-balance">
+        Ben Miller has 8 years of experience in keynote and workshop
+        facilitation in leadership, personal and organisational resilience.
+      </p>
+    </div>
+    <div class="mx-auto max-w-5xl space-y-8">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="space-y-4 rounded-xl bg-white p-6">
+          <h2 class="font-display text-2xl">Brain-Based Coaching</h2>
+          <p class="text-balance">
+            Discover how understanding the brain can support clearer thinking,
+            stronger habits, and more effective leadership. Build practical
+            strategies for focus, resilience, and decision-making.
+          </p>
+        </div>
+      </div>
+      <Link to="/contact">Request a consultation →</Link>
+    </div>
+  </div>
 </Layout>
