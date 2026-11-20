@@ -18,8 +18,29 @@
   --color-geraldine-900: #7d211f;
   --color-geraldine-950: #440c0b;
 
-  --color-tangerine: #ffad33;
-  --color-moss: #b8e7b1;
+  --color-tangerine-50: #fff9eb;
+  --color-tangerine-100: #ffedc6;
+  --color-tangerine-200: #ffd988;
+  --color-tangerine-300: #ffbe4a;
+  --color-tangerine-400: #ffad33;
+  --color-tangerine-500: #f98107;
+  --color-tangerine-600: #dd5c02;
+  --color-tangerine-700: #b73d06;
+  --color-tangerine-800: #942f0c;
+  --color-tangerine-900: #7a270d;
+  --color-tangerine-950: #461102;
+
+  --color-moss-50: #f4fbf2;
+  --color-moss-100: #e4f7e1;
+  --color-moss-200: #b8e7b1;
+  --color-moss-300: #9fde97;
+  --color-moss-400: #6dc662;
+  --color-moss-500: #49aa3d;
+  --color-moss-600: #388c2d;
+  --color-moss-700: #2f6e27;
+  --color-moss-800: #285823;
+  --color-moss-900: #22491e;
+  --color-moss-950: #0e270c;
 }
 
 @theme inline {
