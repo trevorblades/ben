@@ -1,6 +1,6 @@
 import { DOMParser, XMLSerializer } from "@xmldom/xmldom";
 import type { APIRoute } from "astro";
-import logo from "../assets/logo.svg?raw";
+import logo from "~/assets/logo.svg?raw";
 
 export const prerender = true;
 

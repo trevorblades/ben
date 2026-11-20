@@ -1,0 +1,35 @@
+---
+import Link from "astro-typesafe-routes/link";
+import Logo from "~/assets/logo.svg";
+---
+
+<footer class="bg-melanzane text-lace">
+  <div class="mx-auto flex max-w-360 justify-between px-4 py-8 md:px-6">
+    <div class="flex items-center gap-6">
+      <Logo class="size-6 fill-current" />
+      <nav>
+        <ul class="flex gap-4">
+          <li>
+            <Link class="link" to="/">About</Link>
+          </li>
+          <li>
+            <Link class="link" to="/services">Services</Link>
+          </li>
+          <li>
+            <Link class="link" to="/contact">Contact</Link>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              class="link"
+              href="https://substack.com"
+              >Substack ↗</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div>&copy; 2026 Ben Miller Leadership</div>
+  </div>
+</footer>
