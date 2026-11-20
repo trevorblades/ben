@@ -3,7 +3,7 @@ import Link from "astro-typesafe-routes/link";
 ---
 
 <div class="grid grid-cols-2">
-  <div class="space-y-12 px-6 py-45">
+  <div class="space-y-12 px-4 py-45 md:px-6">
     <div class="space-y-8">
       <h1 class="font-display text-7xl">Explore the Unknown</h1>
       <p class="text-xl text-balance">
@@ -11,11 +11,6 @@ import Link from "astro-typesafe-routes/link";
         facilitation in leadership, personal and organisational resilience.
       </p>
     </div>
-    <Link
-      to="/services"
-      class="inline-flex items-center gap-2 rounded-md border border-geraldine-500 bg-geraldine-400 px-6 py-4 text-xl font-medium transition-colors hover:bg-geraldine-300"
-    >
-      View services →
-    </Link>
+    <Link to="/services" class="btn"> View services → </Link>
   </div>
 </div>

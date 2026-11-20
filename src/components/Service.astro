@@ -1,0 +1,12 @@
+---
+type Props = {
+  title: string;
+};
+---
+
+<div class="space-y-4 rounded-xl bg-white p-6">
+  <h2 class="font-display text-2xl">{Astro.props.title}</h2>
+  <p class="text-balance">
+    <slot />
+  </p>
+</div>

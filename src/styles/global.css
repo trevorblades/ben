@@ -30,3 +30,7 @@
 @utility link {
   @apply relative after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform hover:after:origin-left hover:after:scale-x-100;
 }
+
+@utility btn {
+  @apply rounded-md border border-geraldine-500 bg-geraldine-400 px-6 py-4 text-xl font-medium transition-colors hover:border-geraldine-400 hover:bg-geraldine-300;
+}
