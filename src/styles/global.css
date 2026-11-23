@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@layer base {
+  button {
+    @variant not-disabled {
+      cursor: pointer;
+    }
+  }
+}
+
 @theme {
   --color-*: initial;
   --color-white: #fff;
@@ -120,10 +128,4 @@
 
 @utility input {
   @apply h-12 w-full rounded-md border bg-white px-3;
-}
-
-button {
-  @variant not-disabled {
-    cursor: pointer;
-  }
 }
