@@ -55,3 +55,15 @@
 @utility btn {
   @apply rounded-md border border-geraldine-500 bg-geraldine-400 px-6 py-4 text-xl font-medium transition-colors hover:border-geraldine-400 hover:bg-geraldine-300;
 }
+
+@utility label {
+  @apply leading-loose after:text-geraldine-400 group-has-required/form-control:after:content-['_*'];
+}
+
+@utility input {
+  @apply h-12 w-full rounded-md border bg-white px-3;
+}
+
+button {
+  cursor: pointer;
+}

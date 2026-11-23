@@ -1,7 +1,59 @@
 ---
+import { Input } from "~/components/Input";
+import { Select } from "~/components/Select";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title="Contact">
-  <h1 class="font-display text-7xl">Request a Consultation</h1>
+  <div class="space-y-20 px-4 pt-30 pb-20 md:px-6">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-7xl">Request a Consultation</h1>
+    </div>
+    <form
+      name="contact"
+      data-netlify="true"
+      class="mx-auto max-w-5xl space-y-8 rounded-xl bg-white p-6"
+    >
+      <div class="grid grid-cols-2 gap-4">
+        <Input label="First name" required name="first" />
+        <Input label="Last name" required name="last" />
+        <Input label="Email" required type="email" name="email" />
+        <Input label="Phone" required type="tel" name="phone" />
+        <Input label="Company name" required name="company" />
+        <Input
+          required
+          label="Role"
+          name="role"
+          placeholder="Team lead, supervisor, manager, etc."
+        />
+        <Select required label="What area do you need help with?">
+          <option value="leadership-development" selected="selected">
+            Leadership Development
+          </option>
+          <option value="executive-coaching">Executive Coaching</option>
+          <option value="team-alignment">Team Alignment</option>
+          <option value="strategic-planning">Strategic Planning</option>
+          <option value="inclusive-leadership">Inclusive Leadership</option>
+          <option value="the-better-boss">The Better Boss</option>
+          <option value="the-real-strategy">The Real Strategy</option>
+          <option value="small-group-leader-development-program">
+            Small Group Leader Development Program
+          </option>
+          <option value="dei">DEI</option>
+        </Select>
+        <Select label="How did you hear about us?">
+          <option>Select one...</option>
+          <option value="google">Google</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="referral">Referral</option>
+          <option value="participant">
+            Participated in one of our programs
+          </option>
+          <option value="social-media">Social media</option>
+          <option value="other">Other</option>
+        </Select>
+      </div>
+      <button class="w-full btn" type="submit">Submit</button>
+    </form>
+  </div>
 </Layout>

@@ -55,7 +55,7 @@ export const TestimonialCarousel: React.FC<{
             <div
               key={index.toString()}
               className={cn(
-                "space-y-4 transition-opacity duration-500 [grid-area:1/1/2/2]",
+                "col-start-1 row-start-1 space-y-4 transition-opacity duration-500",
                 {
                   "opacity-0": index !== activeIndex,
                 },
@@ -72,7 +72,7 @@ export const TestimonialCarousel: React.FC<{
         <div className="flex gap-3">
           <button
             type="button"
-            className="size-10 cursor-pointer rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
+            className="size-10 rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
             onClick={() => {
               setActiveIndex((prev) =>
                 prev > 0 ? prev - 1 : testimonials.length - 1,
@@ -83,7 +83,7 @@ export const TestimonialCarousel: React.FC<{
           </button>
           <button
             type="button"
-            className="size-10 cursor-pointer rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
+            className="size-10 rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
             onClick={() => {
               setActiveIndex((prev) => (prev + 1) % testimonials.length);
             }}
