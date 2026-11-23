@@ -69,7 +69,11 @@ export const ContactForm: React.FC = () => {
           <option>Other</option>
         </Select>
       </div>
-      <button disabled={isLoading} className="w-full btn" type="submit">
+      <button
+        disabled={isLoading}
+        className="btn-lg w-full btn-primary btn"
+        type="submit"
+      >
         Submit
       </button>
     </form>

@@ -1,8 +1,77 @@
 ---
+import { Image } from "astro:assets";
+import ben from "~/assets/images/ben.jpg";
+import quadTandem from "~/assets/images/quad-tandem.jpg";
+import wirthHats from "~/assets/images/wirth-hats.jpg";
+import { CredentialsGrid } from "~/components/CredentialsGrid";
 import HomePageHero from "~/components/HomePageHero.astro";
+import OtherWork from "~/components/OtherWork.astro";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout>
   <HomePageHero />
+  <div class="grid grid-cols-5">
+    <div class="relative col-span-2">
+      <Image src={ben} alt="Ben Miller" class="size-full object-cover" />
+      <svg
+        aria-hidden="true"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 12 598"
+        class="absolute top-0 right-0 h-full w-3 fill-white"
+      >
+        <path
+          d="M12 0H0v114.587l12 62.068L.977 272.144l9.767 297.209L0 598h12z"
+        />
+      </svg>
+    </div>
+    <div class="col-span-3 space-y-6 bg-white px-4 py-30 md:px-6">
+      <h2 class="font-display uppercase">About Ben</h2>
+      <p class="text-xl text-balance">
+        Ben Miller is on a mission to make mental-health conversations “less big
+        and scary.” His social enterprise, Wirth Hats, is a conversation-starter
+        offering free counselling sessions to anyone in need.
+      </p>
+      <CredentialsGrid
+        credentials={{
+          "ICF Training": "Short description about ICF Coaching certification.",
+          "Mental Health Creds": "Short description about mental health creds.",
+          "Mind training":
+            "Short description about mind training and why it's relevant.",
+          "CPH Business School":
+            "Talking about my experience at Copenhagen Business School.",
+        }}
+      />
+    </div>
+  </div>
+  <div class="space-y-8 px-4 py-20 md:px-6">
+    <div class="max-w-3xl space-y-6">
+      <h2 class="font-display uppercase">Other work</h2>
+      <p class="text-xl text-balance">
+        Foster ongoing mental health resilience both individually and within
+        organisations. Here's what else I'm up to outside of leadership
+        development.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <OtherWork
+        image={wirthHats}
+        title="Wirth Hats"
+        url="https://wirthhats.com"
+      >
+        From the founding of Wirth Hats, it has always been our mission to
+        remove barriers that prevent people from accessing mental health
+        support.
+      </OtherWork>
+      <OtherWork
+        image={quadTandem}
+        title="Quad Tandem"
+        url="https://wirthhats.com/pages/quad-tandem-world-championships-2023"
+      >
+        The Quad Tandem World Championships is the ultimate team race and a
+        mental health fundraiser for WIRTH Foundation.
+      </OtherWork>
+    </div>
+  </div>
 </Layout>

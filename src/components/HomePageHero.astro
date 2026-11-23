@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import Link from "astro-typesafe-routes/link";
+import hero from "~/assets/images/hero.png";
 ---
 
 <div class="grid grid-cols-2">
@@ -11,6 +13,11 @@ import Link from "astro-typesafe-routes/link";
         facilitation in leadership, personal and organisational resilience.
       </p>
     </div>
-    <Link to="/services" class="btn"> View services → </Link>
+    <Link to="/services" class="btn-lg btn-primary btn"> View services →</Link>
   </div>
+  <Image
+    src={hero}
+    alt="person exploring a cave with a torch"
+    class="size-full object-cover object-left"
+  />
 </div>

@@ -41,6 +41,33 @@
   --color-moss-800: #285823;
   --color-moss-900: #22491e;
   --color-moss-950: #0e270c;
+
+  --btn-size-md: --spacing(10);
+  --btn-size-lg: --spacing(14);
+
+  --btn-text-md: var(--text-base);
+  --btn-text-lg: var(--text-lg);
+
+  --btn-px-md: --spacing(3);
+  --btn-px-lg: --spacing(4);
+
+  --btn-bg-primary: var(--color-geraldine-400);
+  --btn-bg-secondary: var(--color-tangerine-400);
+
+  --btn-hover-bg-primary: var(--color-geraldine-300);
+  --btn-hover-bg-secondary: var(--color-tangerine-300);
+
+  --btn-active-bg-primary: var(--color-geraldine-200);
+  --btn-active-bg-secondary: var(--color-tangerine-200);
+
+  --btn-border-primary: var(--color-geraldine-500);
+  --btn-border-secondary: var(--color-tangerine-500);
+
+  --btn-hover-border-primary: var(--color-geraldine-400);
+  --btn-hover-border-secondary: var(--color-tangerine-400);
+
+  --btn-active-border-primary: var(--color-geraldine-300);
+  --btn-active-border-secondary: var(--color-tangerine-300);
 }
 
 @theme inline {
@@ -61,7 +88,30 @@
 }
 
 @utility btn {
-  @apply rounded-md border border-geraldine-500 bg-geraldine-400 px-6 py-4 text-xl font-medium transition-colors hover:not-disabled:border-geraldine-400 hover:not-disabled:bg-geraldine-300 disabled:opacity-50;
+  @apply inline-flex items-center justify-center rounded-md border font-medium transition-colors disabled:opacity-50;
+}
+
+@utility btn-* {
+  height: --value(--btn-size-*);
+  padding-inline: --value(--btn-px-*);
+  font-size: --value(--btn-text-*);
+}
+
+@utility btn-* {
+  background-color: --value(--btn-bg-*);
+  border-color: --value(--btn-border-*);
+
+  @variant not-disabled {
+    @variant hover {
+      background-color: --value(--btn-hover-bg-*);
+      border-color: --value(--btn-hover-border-*);
+    }
+
+    @variant active {
+      background-color: --value(--btn-active-bg-*);
+      border-color: --value(--btn-active-border-*);
+    }
+  }
 }
 
 @utility label {

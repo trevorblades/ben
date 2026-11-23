@@ -45,7 +45,6 @@ export const TestimonialCarousel: React.FC<{
           className="absolute top-0 right-0 h-full w-3 fill-white"
           preserveAspectRatio="none"
         >
-          <title>edge</title>
           <path d="M12 247.778 1.44 211.011v-19.183L12 163.054 8.675 0H12v446H0l1.92-23.179 6.755-4.796z" />
         </svg>
       </div>
@@ -69,10 +68,9 @@ export const TestimonialCarousel: React.FC<{
             </div>
           ))}
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 *:size-10 *:btn-md *:btn-secondary *:px-0 *:text-lg *:btn">
           <button
             type="button"
-            className="size-10 rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
             onClick={() => {
               setActiveIndex((prev) =>
                 prev > 0 ? prev - 1 : testimonials.length - 1,
@@ -83,7 +81,6 @@ export const TestimonialCarousel: React.FC<{
           </button>
           <button
             type="button"
-            className="size-10 rounded-md border border-tangerine-500 bg-tangerine-400 text-xl transition-colors hover:border-tangerine-400 hover:bg-tangerine-300 active:border-tangerine-300 active:bg-tangerine-200"
             onClick={() => {
               setActiveIndex((prev) => (prev + 1) % testimonials.length);
             }}
