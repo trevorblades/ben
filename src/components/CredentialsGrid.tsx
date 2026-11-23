@@ -6,7 +6,7 @@ export const CredentialsGrid: React.FC<{
       {Object.entries(credentials).map(([title, description]) => (
         <div
           key={title}
-          className="space-y-1 rounded border border-moss-300 bg-moss-50 p-4"
+          className="space-y-1 rounded border border-moss-300 p-4"
         >
           <h3 className="text-lg font-medium">{title}</h3>
           <p className="text-balance">{description}</p>
