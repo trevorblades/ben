@@ -1,13 +1,15 @@
+import netlify from "@astrojs/netlify";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 import typesafeRoutes from "astro-typesafe-routes";
 
 export default defineConfig({
+  adapter: netlify(),
+  integrations: [typesafeRoutes(), react()],
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [typesafeRoutes(), react()],
   fonts: [
     {
       provider: fontProviders.fontsource(),
@@ -23,4 +25,12 @@ export default defineConfig({
       fallbacks: ["system-ui", "sans-serif"],
     },
   ],
+  env: {
+    schema: {
+      RESEND_API_KEY: envField.string({
+        access: "secret",
+        context: "server",
+      }),
+    },
+  },
 });
