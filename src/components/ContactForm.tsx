@@ -1,4 +1,4 @@
-import { type ActionReturnType, actions } from "astro:actions";
+import { type ActionReturnType, actions, isInputError } from "astro:actions";
 import { useState } from "react";
 import { Input } from "./Input";
 import { Select } from "./Select";
@@ -18,6 +18,10 @@ export const ContactForm: React.FC = () => {
     );
   }
 
+  const inputError = isInputError(result?.error)
+    ? result.error.fields
+    : undefined;
+
   return (
     <form
       className="space-y-8 p-6"
@@ -32,17 +36,45 @@ export const ContactForm: React.FC = () => {
         setIsLoading(false);
       }}
     >
-      <div className="grid grid-cols-2 gap-4">
-        <Input label="First name" required name="first" />
-        <Input label="Last name" required name="last" />
-        <Input label="Email" required type="email" name="email" />
-        <Input label="Phone" required type="tel" name="phone" />
-        <Input label="Company name" required name="company" />
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+        <Input
+          label="First name"
+          required
+          name="first"
+          errors={inputError?.first}
+        />
+        <Input
+          label="Last name"
+          required
+          name="last"
+          errors={inputError?.last}
+        />
+        <Input
+          label="Email"
+          required
+          type="email"
+          name="email"
+          errors={inputError?.email}
+        />
+        <Input
+          label="Phone"
+          required
+          type="tel"
+          name="phone"
+          errors={inputError?.phone}
+        />
+        <Input
+          label="Company name"
+          required
+          name="company"
+          errors={inputError?.company}
+        />
         <Input
           required
           label="Role"
           name="role"
           placeholder="Team lead, supervisor, manager, etc."
+          errors={inputError?.role}
         />
         <Select
           required
@@ -74,7 +106,7 @@ export const ContactForm: React.FC = () => {
         className="btn-lg w-full btn-primary btn"
         type="submit"
       >
-        Submit
+        {isLoading ? "Submitting..." : "Submit"}
       </button>
     </form>
   );

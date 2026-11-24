@@ -57,7 +57,7 @@
   --btn-text-lg: var(--text-lg);
 
   --btn-px-md: --spacing(3);
-  --btn-px-lg: --spacing(4);
+  --btn-px-lg: --spacing(5);
 
   --btn-bg-primary: var(--color-geraldine-400);
   --btn-bg-secondary: var(--color-tangerine-400);
@@ -123,9 +123,9 @@
 }
 
 @utility label {
-  @apply leading-loose after:text-geraldine-400 group-has-required/label:after:content-['_*'];
+  @apply mb-2 leading-none after:text-geraldine-400 group-has-required/label:after:content-['_*'];
 }
 
 @utility input {
-  @apply h-12 w-full rounded-md border bg-white px-3;
+  @apply h-12 w-full rounded-md border bg-white px-3 aria-invalid:border-geraldine-400;
 }
