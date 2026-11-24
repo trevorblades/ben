@@ -1,7 +1,10 @@
 import { cn } from "cn";
 
 export const Input: React.FC<
-  React.ComponentProps<"input"> & { label: string; errors?: string[] }
+  React.ComponentProps<"input"> & {
+    label: string;
+    errors?: string[];
+  }
 > = ({ label, errors, className, ...props }) => {
   return (
     <label className={cn("group/label", className)}>

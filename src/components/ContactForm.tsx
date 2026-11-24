@@ -10,7 +10,7 @@ export const ContactForm: React.FC = () => {
 
   if (result && !result.error) {
     return (
-      <div className="p-8 text-center">
+      <div className="p-10 text-center">
         <p className="text-lg">
           Success! We've recieved your submission and will be in touch soon.
         </p>
@@ -38,34 +38,34 @@ export const ContactForm: React.FC = () => {
     >
       <div className="grid grid-cols-2 gap-x-4 gap-y-6">
         <Input
-          label="First name"
           required
+          label="First name"
           name="first"
           errors={inputError?.first}
         />
         <Input
-          label="Last name"
           required
+          label="Last name"
           name="last"
           errors={inputError?.last}
         />
         <Input
-          label="Email"
           required
+          label="Email"
           type="email"
           name="email"
           errors={inputError?.email}
         />
         <Input
-          label="Phone"
           required
+          label="Phone"
           type="tel"
           name="phone"
           errors={inputError?.phone}
         />
         <Input
-          label="Company name"
           required
+          label="Company name"
           name="company"
           errors={inputError?.company}
         />
