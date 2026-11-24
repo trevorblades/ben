@@ -96,7 +96,7 @@
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center rounded-md border font-medium transition-colors disabled:opacity-50;
+  @apply inline-flex items-center justify-center rounded-md border font-medium transition-colors disabled:opacity-50 text-melanzane;
 }
 
 @utility btn-* {

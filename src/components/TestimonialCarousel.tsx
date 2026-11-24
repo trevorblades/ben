@@ -45,7 +45,7 @@ export const TestimonialCarousel: React.FC<{
           className="absolute top-0 right-0 h-full w-3 fill-white"
           preserveAspectRatio="none"
         >
-          <path d="M12 247.778 1.44 211.011v-19.183L12 163.054 8.675 0H12v446H0l1.92-23.179 6.755-4.796z" />
+          <path d="M12 287.778 1.44 211.011v-69.183L12 83.054 8.675 0H12v446H0l1.92-73.179z" />
         </svg>
       </div>
       <div className="space-y-6 bg-white py-20 layout-gutter">
