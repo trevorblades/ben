@@ -28,7 +28,9 @@ type Props = SEOProps;
   </head>
   <body>
     <Header />
-    <main class="mx-auto max-w-360">
+    <main
+      class="relative mx-auto max-w-360 before:absolute before:inset-y-0 before:-left-px before:w-px before:bg-melanzane/10 after:absolute after:inset-y-0 after:-right-px after:w-px after:bg-melanzane/10"
+    >
       <slot />
     </main>
     <Footer />
