@@ -5,7 +5,7 @@ import { Select } from "./Select";
 
 export const ContactForm: React.FC = () => {
   const [result, setResult] =
-    useState<ActionReturnType<typeof actions.sendEmail>>();
+    useState<ActionReturnType<typeof actions.email.send>>();
   const [isLoading, setIsLoading] = useState(false);
 
   if (result && !result.error) {
@@ -31,8 +31,7 @@ export const ContactForm: React.FC = () => {
         setIsLoading(true);
 
         const formData = new FormData(event.currentTarget);
-        setResult(await actions.sendEmail(formData));
-
+        setResult(await actions.email.send(formData));
         setIsLoading(false);
       }}
     >
