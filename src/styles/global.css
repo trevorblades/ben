@@ -134,6 +134,6 @@
   @apply max-w-360 mx-auto;
 }
 
-@utility gutter {
+@utility layout-gutter {
   @apply px-4 md:px-6;
 }

@@ -48,7 +48,7 @@ export const TestimonialCarousel: React.FC<{
           <path d="M12 247.778 1.44 211.011v-19.183L12 163.054 8.675 0H12v446H0l1.92-23.179 6.755-4.796z" />
         </svg>
       </div>
-      <div className="space-y-6 bg-white py-20 gutter">
+      <div className="space-y-6 bg-white py-20 layout-gutter">
         <div className="grid items-center">
           {testimonials.map((testimonial, index) => (
             <div
