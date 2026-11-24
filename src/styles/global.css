@@ -129,3 +129,11 @@
 @utility input {
   @apply h-12 w-full rounded-md border bg-white px-3 aria-invalid:border-geraldine-400;
 }
+
+@utility layout-container {
+  @apply max-w-360 mx-auto;
+}
+
+@utility gutter {
+  @apply px-4 md:px-6;
+}

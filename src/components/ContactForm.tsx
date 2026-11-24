@@ -100,6 +100,7 @@ export const ContactForm: React.FC = () => {
           <option>Social media</option>
           <option>Other</option>
         </Select>
+        <input className="hidden" name="mobile" type="text" />
       </div>
       <button
         disabled={isLoading}

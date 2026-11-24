@@ -17,14 +17,17 @@ export const server = {
       role: z.string(),
       service: z.string(),
       source: z.string().optional(),
+      mobile: z.string().optional(), // honeypot
     }),
     handler: (input) => {
-      resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "tdblades@gmail.com",
-        subject: "New Contact Form Submission",
-        html: JSON.stringify(input),
-      });
+      if (!input.mobile) {
+        resend.emails.send({
+          from: "onboarding@resend.dev",
+          to: "tdblades@gmail.com",
+          subject: "New Contact Form Submission",
+          html: JSON.stringify(input),
+        });
+      }
     },
   }),
 };
