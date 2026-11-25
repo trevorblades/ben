@@ -1,6 +1,10 @@
 ---
 import Link from "astro-typesafe-routes/link";
+import BCHydro from "~/assets/logos/bc-hydro.svg";
+import IBM from "~/assets/logos/ibm.svg";
+import Lululemon from "~/assets/logos/lululemon.svg";
 import Lush from "~/assets/logos/lush.svg";
+import TransLink from "~/assets/logos/translink.svg";
 import YVR from "~/assets/logos/yvr.svg";
 import { QuoteAuthor } from "~/components/QuoteAuthor";
 import Service from "~/components/Service.astro";
@@ -56,13 +60,13 @@ import Layout from "~/layouts/Layout.astro";
       Trusted by the finest organizations
     </h2>
     <div
-      class="grid h-12.5 auto-cols-fr grid-flow-col *:size-full *:fill-current"
+      class="flex flex-wrap justify-evenly gap-4 *:h-8 *:w-30 *:fill-current md:gap-6 md:*:h-10 md:*:w-37.5 lg:*:h-12 lg:*:w-45"
     >
+      <Lululemon />
       <YVR />
-      <YVR />
-      <YVR />
-      <YVR />
-      <YVR />
+      <IBM />
+      <BCHydro />
+      <TransLink />
     </div>
   </div>
   <TestimonialCarousel
