@@ -1,5 +1,6 @@
 import { cn } from "cn";
 import { useState } from "react";
+import { QuoteAuthor } from "./QuoteAuthor";
 
 export const TestimonialCarousel: React.FC<{
   testimonials: {
@@ -60,11 +61,10 @@ export const TestimonialCarousel: React.FC<{
                 },
               )}
             >
-              <p className="text-xl leading-normal">“{testimonial.quote}”</p>
-              <div className="space-y-1">
-                <div className="text-lg font-semibold">{testimonial.by}</div>
-                <div>{testimonial.title}</div>
-              </div>
+              <p className="text-lg leading-normal md:text-xl">
+                “{testimonial.quote}”
+              </p>
+              <QuoteAuthor name={testimonial.by} title={testimonial.title} />
             </div>
           ))}
         </div>

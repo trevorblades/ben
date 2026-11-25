@@ -2,22 +2,29 @@
 import Link from "astro-typesafe-routes/link";
 import Lush from "~/assets/logos/lush.svg";
 import YVR from "~/assets/logos/yvr.svg";
+import { QuoteAuthor } from "~/components/QuoteAuthor";
 import Service from "~/components/Service.astro";
 import { TestimonialCarousel } from "~/components/TestimonialCarousel";
 import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title="Services">
-  <div class="space-y-20 pt-30 pb-20 layout-gutter">
-    <div class="mx-auto max-w-3xl space-y-8 text-center">
-      <h1 class="font-display text-7xl">Services</h1>
-      <p class="text-xl text-balance">
+  <div
+    class="space-y-8 pt-12 pb-12 layout-gutter sm:space-y-12 sm:pt-16 sm:pb-16 md:space-y-16 md:pt-24 md:pb-20 lg:space-y-20 lg:pt-30"
+  >
+    <div
+      class="mx-auto max-w-3xl space-y-2 text-center sm:space-y-4 md:space-y-6 lg:space-y-8"
+    >
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        Services
+      </h1>
+      <p class="text-base text-balance md:text-lg lg:text-xl">
         Ben Miller has 8 years of experience in keynote and workshop
         facilitation in leadership, personal and organisational resilience.
       </p>
     </div>
-    <div class="mx-auto flex max-w-5xl flex-col items-center gap-8">
-      <div class="grid grid-cols-2 gap-6">
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-6 md:gap-8">
+      <div class="grid gap-4 sm:grid-cols-2 md:gap-6">
         <Service title="Brain-Based Coaching">
           Discover how understanding the brain can support clearer thinking,
           stronger habits, and more effective leadership. Build practical
@@ -39,13 +46,13 @@ import Layout from "~/layouts/Layout.astro";
           challenges and lead with confidence.
         </Service>
       </div>
-      <Link to="/contact" class="btn-lg btn-primary btn"
-        >Request a consultation →</Link
-      >
+      <Link to="/contact" class="btn-md btn-primary btn md:btn-lg">
+        Request a consultation →
+      </Link>
     </div>
   </div>
-  <div class="space-y-6 py-10 layout-gutter">
-    <h2 class="text-center font-display uppercase">
+  <div class="space-y-4 py-8 layout-gutter md:space-y-6 md:py-10">
+    <h2 class="text-center font-display text-sm uppercase md:text-base">
       Trusted by the finest organizations
     </h2>
     <div
@@ -82,14 +89,16 @@ import Layout from "~/layouts/Layout.astro";
       },
     ]}
   />
-  <div class="mx-auto max-w-5xl space-y-6 py-30 text-center layout-gutter">
-    <p class="text-4xl leading-normal">
+  <div
+    class="mx-auto max-w-5xl space-y-4 py-12 text-center layout-gutter sm:py-16 md:space-y-6 md:py-24 lg:py-30"
+  >
+    <p class="text-xl leading-normal sm:text-2xl md:text-3xl lg:text-4xl">
       “Ben presented the inspiring story of how WIRTH Hats came to be and
       allowed time at the end for team members to ask questions.”
     </p>
-    <div class="space-y-1">
-      <div class="text-lg font-semibold">Johanna Molloy</div>
-      <div>Brand Operations Manager, Lush Cosmetics</div>
-    </div>
+    <QuoteAuthor
+      name="Johanna Molloy"
+      title="Brand Operations Manager, Lush Cosmetics"
+    />
   </div>
 </Layout>

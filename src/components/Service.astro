@@ -4,9 +4,9 @@ type Props = {
 };
 ---
 
-<div class="space-y-4 rounded-xl bg-white p-6">
-  <h2 class="font-display text-2xl">{Astro.props.title}</h2>
-  <p class="text-balance">
+<div class="space-y-2 rounded-xl bg-white p-4 md:space-y-4 md:p-6">
+  <h2 class="font-display text-xl md:text-2xl">{Astro.props.title}</h2>
+  <p class="text-balance md:text-lg">
     <slot />
   </p>
 </div>

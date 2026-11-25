@@ -4,11 +4,11 @@ import Link from "astro-typesafe-routes/link";
 import hero from "~/assets/images/hero.png";
 ---
 
-<div class="grid-cols-10 sm:grid">
+<div class="relative z-0 grid-cols-10 sm:grid">
   <div
-    class="col-span-6 space-y-8 py-24 layout-gutter sm:space-y-10 sm:py-30 md:space-y-12 md:py-40 lg:col-span-5"
+    class="relative z-10 col-span-6 space-y-6 py-24 layout-gutter sm:space-y-8 sm:py-30 md:space-y-10 md:py-40 lg:col-span-5 lg:space-y-12"
   >
-    <div class="space-y-4 sm:space-y-6 md:space-y-8">
+    <div class="space-y-2 sm:space-y-4 md:space-y-6 lg:space-y-8">
       <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
         Explore the Unknown
       </h1>
@@ -21,9 +21,13 @@ import hero from "~/assets/images/hero.png";
       View services →</Link
     >
   </div>
-  <Image
-    src={hero}
-    alt="person exploring a cave with a torch"
-    class="col-span-4 size-full object-cover object-left max-sm:hidden lg:col-span-5"
-  />
+  <div
+    class="col-span-4 max-sm:absolute max-sm:inset-0 max-sm:mask-l-to-70% lg:col-span-5"
+  >
+    <Image
+      src={hero}
+      alt="person exploring a cave with a torch"
+      class="size-full object-cover object-left"
+    />
+  </div>
 </div>
