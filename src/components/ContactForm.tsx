@@ -24,7 +24,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="space-y-8 p-6"
+      className="space-y-8 p-6 max-md:px-4"
       onSubmit={async (event) => {
         event.preventDefault();
 
@@ -35,7 +35,7 @@ export const ContactForm: React.FC = () => {
         setIsLoading(false);
       }}
     >
-      <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+      <div className="grid gap-x-4 gap-y-6 md:grid-cols-2">
         <Input
           required
           label="First name"

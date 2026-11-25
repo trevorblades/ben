@@ -10,23 +10,23 @@ export const email = {
   send: defineAction({
     accept: "form",
     input: z.object({
-      first: z.string().describe("First name"),
-      last: z.string().describe("Last name"),
-      email: z.email().describe("Email"),
-      phone: z.string().describe("Phone"),
-      company: z.string().describe("Company name"),
-      role: z.string().describe("Role"),
-      service: z.string().describe("What area do you need help with?"),
-      source: z.string().optional().describe("How did you hear about us?"),
+      first: z.string(),
+      last: z.string(),
+      email: z.email(),
+      phone: z.string(),
+      company: z.string(),
+      role: z.string(),
+      service: z.string(),
+      source: z.string().optional(),
       mobile: z.string().optional(), // honeypot
     }),
-    handler: (input) => {
+    handler: async (input) => {
       if (input.mobile) {
-        return; // honeypot 🍯 field filled - fly out early 🕊️
+        return; // honeypot 🍯 field filled - exit early 🕊️
       }
 
-      resend.emails.send({
-        from: "onboarding@resend.dev",
+      await resend.emails.send({
+        from: "Ben Miller Leadership <noreply@benmillerleadership.com>",
         to: "tdblades@gmail.com",
         replyTo: input.email,
         subject: "New submission from Contact Form",
