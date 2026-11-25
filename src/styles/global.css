@@ -50,13 +50,16 @@
   --color-moss-900: #22491e;
   --color-moss-950: #0e270c;
 
-  --btn-size-md: --spacing(10);
+  --btn-size-sm: --spacing(10);
+  --btn-size-md: --spacing(12);
   --btn-size-lg: --spacing(14);
 
+  --btn-text-sm: var(--text-base);
   --btn-text-md: var(--text-base);
   --btn-text-lg: var(--text-lg);
 
-  --btn-px-md: --spacing(3);
+  --btn-px-sm: --spacing(3);
+  --btn-px-md: --spacing(4);
   --btn-px-lg: --spacing(5);
 
   --btn-bg-primary: var(--color-geraldine-400);

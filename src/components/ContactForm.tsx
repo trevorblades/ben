@@ -103,7 +103,7 @@ export const ContactForm: React.FC = () => {
       </div>
       <button
         disabled={isLoading}
-        className="btn-lg w-full btn-primary btn"
+        className="btn-md w-full btn-primary btn md:btn-lg"
         type="submit"
       >
         {isLoading ? "Submitting..." : "Submit"}

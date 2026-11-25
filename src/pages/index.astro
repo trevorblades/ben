@@ -11,8 +11,8 @@ import Layout from "~/layouts/Layout.astro";
 
 <Layout>
   <HomePageHero />
-  <div class="grid grid-cols-5">
-    <div class="relative col-span-2">
+  <div class="grid-cols-5 md:grid">
+    <div class="relative col-span-2 max-md:hidden">
       <Image src={ben} alt="Ben Miller" class="size-full object-cover" />
       <svg
         aria-hidden="true"
@@ -26,9 +26,11 @@ import Layout from "~/layouts/Layout.astro";
         />
       </svg>
     </div>
-    <div class="col-span-3 space-y-6 bg-white py-30 layout-gutter">
+    <div
+      class="col-span-3 space-y-4 bg-white py-12 layout-gutter sm:py-16 md:space-y-6 md:py-24 lg:py-30"
+    >
       <h2 class="font-display uppercase">About Ben</h2>
-      <p class="text-xl text-balance">
+      <p class="text-base text-balance md:text-lg lg:text-xl">
         Ben Miller is on a mission to make mental-health conversations “less big
         and scary.” His social enterprise, Wirth Hats, is a conversation-starter
         offering free counselling sessions to anyone in need.
@@ -45,16 +47,16 @@ import Layout from "~/layouts/Layout.astro";
       />
     </div>
   </div>
-  <div class="space-y-8 py-20 layout-gutter">
-    <div class="max-w-3xl space-y-6">
+  <div class="space-y-6 py-12 layout-gutter sm:py-16 md:space-y-8 md:py-20">
+    <div class="max-w-3xl space-y-4 md:space-y-6">
       <h2 class="font-display uppercase">Other work</h2>
-      <p class="text-xl text-balance">
+      <p class="text-base text-balance md:text-lg lg:text-xl">
         Foster ongoing mental health resilience both individually and within
         organisations. Here's what else I'm up to outside of leadership
         development.
       </p>
     </div>
-    <div class="grid grid-cols-2 gap-6">
+    <div class="grid gap-6 md:grid-cols-2">
       <OtherWork
         image={wirthHats}
         title="Wirth Hats"

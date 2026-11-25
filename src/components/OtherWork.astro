@@ -11,18 +11,22 @@ type Props = {
 const { image, title, url } = Astro.props;
 ---
 
-<div class="flex flex-col items-start gap-4 rounded-xl bg-white p-4">
+<div
+  class="flex flex-col items-start gap-3 rounded-xl bg-white p-3 md:gap-4 md:p-4"
+>
   <Image
     alt={title}
     src={image}
     class="aspect-video w-full rounded-md object-cover"
   />
-  <h3 class="font-display text-2xl">{title}</h3>
-  <p class="text-balance">
-    <slot />
-  </p>
+  <div class="space-y-1 md:space-y-2">
+    <h3 class="font-display text-xl md:text-2xl">{title}</h3>
+    <p class="text-balance">
+      <slot />
+    </p>
+  </div>
   <a
-    class="mt-auto btn-md btn-secondary btn"
+    class="mt-auto btn-sm btn-secondary btn"
     href={url}
     target="_blank"
     rel="noopener"

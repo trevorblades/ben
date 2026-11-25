@@ -68,7 +68,7 @@ export const TestimonialCarousel: React.FC<{
             </div>
           ))}
         </div>
-        <div className="flex gap-3 *:size-10 *:btn-md *:btn-secondary *:px-0 *:text-lg *:btn">
+        <div className="flex gap-3 *:size-10 *:btn-sm *:btn-secondary *:px-0 *:text-lg *:btn">
           <button
             type="button"
             onClick={() => {
