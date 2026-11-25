@@ -1,6 +1,7 @@
 ---
 import Link from "astro-typesafe-routes/link";
 import Logo from "~/assets/logo.svg";
+import { HeaderNav } from "./HeaderNav";
 ---
 
 <header class="sticky top-0 z-10 border-b border-melanzane/10 bg-lace">
@@ -13,18 +14,6 @@ import Logo from "~/assets/logo.svg";
         Ben Miller <br>Leadership
       </div>
     </Link>
-    <nav>
-      <ul class="flex gap-6 font-medium">
-        <li>
-          <Link class="link link-hover" to="/">About</Link>
-        </li>
-        <li>
-          <Link class="link link-hover" to="/services">Services</Link>
-        </li>
-        <li>
-          <Link class="link link-hover" to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
+    <HeaderNav client:load />
   </div>
 </header>

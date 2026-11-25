@@ -24,7 +24,7 @@ export const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="space-y-8 p-6 max-md:px-4"
+      className="space-y-6 p-4 md:space-y-8 md:p-6"
       onSubmit={async (event) => {
         event.preventDefault();
 

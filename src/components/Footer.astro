@@ -4,10 +4,12 @@ import Logo from "~/assets/logo.svg";
 ---
 
 <footer class="bg-melanzane text-lace">
-  <div class="flex justify-between py-8 layout-container layout-gutter">
+  <div
+    class="flex gap-4 py-6 layout-container layout-gutter sm:justify-between md:py-8"
+  >
     <div class="flex items-center gap-6">
       <Logo class="size-6 fill-current" />
-      <nav>
+      <nav class="max-sm:hidden">
         <ul class="flex gap-4">
           <li>
             <Link class="link link-hover" to="/">About</Link>

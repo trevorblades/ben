@@ -10,7 +10,10 @@ import PreFooter from "~/components/PreFooter.astro";
 type Props = SEOProps;
 ---
 
-<html lang="en" class="bg-lace text-melanzane selection:bg-geraldine-400">
+<html
+  lang="en"
+  class="bg-lace text-melanzane selection:bg-geraldine-400 has-data-[modal='true']:overflow-hidden"
+>
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/svg+xml" href={$path({ to: "/favicon.svg" })}>
