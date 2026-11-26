@@ -10,8 +10,8 @@ export const ContactForm: React.FC = () => {
 
   if (result && !result.error) {
     return (
-      <div className="p-10 text-center">
-        <p className="text-lg">
+      <div className="p-8 text-center md:p-10">
+        <p className="md:text-lg">
           Success! We've recieved your submission and will be in touch soon.
         </p>
       </div>
